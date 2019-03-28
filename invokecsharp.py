@@ -3,6 +3,7 @@ print("this my first python demo on github")
 import clr
 
 # the sample method invoke C# dll
+# clr not clr ,it is pythonnet
 
 from HotelLockDll import *
 clr.FindAssembly("HotelLockDll.dll")
