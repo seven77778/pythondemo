@@ -5,6 +5,8 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="invokecsharp.HotelLockDll" />
+          <option value="InvokeMyCSharpDll.CSharpClassLibraryForJava" />
+          <option value="InvokeMyCSharpDll.Class1" />
         </list>
       </option>
     </inspection_tool>
