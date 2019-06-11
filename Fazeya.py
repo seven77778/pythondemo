@@ -1,5 +1,6 @@
 # -*-coding:utf-8-*
 # make a big fortune hhahaa
+#大乐透机选
 import random
 
 list_red = [x for x in range(1,36)]        #1~35红色球序列
@@ -10,6 +11,7 @@ res_blue = random.sample(list_blue, 2)     #随机选取2个红球
 
 res_red.sort()                             #对选取的5个红球排序
 res_blue.sort()                            #对选取的2个蓝球排序
-
-res = res_red + res_blue
+#coding=utf-8
+res = [ res_red]+ [ res_blue]
 print(res)
+print('哈哈哈')
