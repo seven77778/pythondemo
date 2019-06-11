@@ -1,7 +1,7 @@
 # coding=utf8
 import itchat
 
-
+# 自动回复所有人
 # 当接收到的消息是Text，即文字消息 OK
 # 注册re_msg的意义在于，告诉itchat每次有符合特定条件的消息，itchat要把消息作为参数，去调用re_msg。
 @itchat.msg_register('Text')
@@ -15,7 +15,7 @@ def text_reply(msg):
     if u'干什么' in message:
         replay = u'在忙呢'
     elif u'逼' in message:
-        replay = u'含有敏感词汇,请注意言辞'
+        replay = u'含有敏感词汇,请注意言辞，说脏话也不太好，希望你能改正'
     elif u'生气' in message:
         replay = u'生气对身体不好'
     elif u'?' in message:
