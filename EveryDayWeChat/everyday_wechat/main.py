@@ -1,5 +1,5 @@
 # coding=utf-8
-
+# from https://github.com/sfyc23/EverydayWechat
 """
 核心代码。
 """
