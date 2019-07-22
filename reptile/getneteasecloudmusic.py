@@ -1,4 +1,9 @@
 # -*- coding:utf-8 -*-
+# 获取某一首歌曲热门、所有评论 NetWork-XHR
+
+# for Crypto
+# pip uninstall crypto pycryptodome
+# pip install pycryptodome
 
 import urllib.request
 import http.cookiejar
@@ -13,8 +18,6 @@ import os
 
 class music:
 
-# python -m pip install -U pip
-# pip install pycrypto
 
     #初始化
     def __init__(self):
@@ -103,7 +106,7 @@ class music:
         content = self.get_json(url, params, encSecKey)
         json_dict = json.loads(content)
         hot_comment = json_dict['hotComments']
-        f = open('c:/Users/zsx/Desktop/HotComments.txt', 'w', encoding='utf-8')
+        f = open('d:/music.txt', 'w', encoding='utf-8')
         for i in hot_comment:
             #将评论输出至txt文件中
             time_local = time.localtime(int(i['time'] / 1000))  # 将毫秒级时间转换为日期
@@ -124,7 +127,7 @@ class music:
         content = self.get_json(url, params, encSecKey)
         json_dict = json.loads(content)
         comments_num = int(json_dict['total'])
-        f = open('c:/Users/zsx/Desktop/AllComments.txt', 'w', encoding='utf-8')
+        f = open('d:/music.txt', 'w', encoding='utf-8')
         present_page = 0
         if (comments_num % 20 == 0):
             page = comments_num / 20
@@ -132,8 +135,8 @@ class music:
             page = int(comments_num / 20) + 1
         print("共有%d页评论" % page)
         print("共有%d条评论" % comments_num)
-        # 逐页抓取
-        for i in range(page):
+        # 逐页抓取,page 是全部
+        for i in range(2):
             params = self.get_params(i + 1)
             encSecKey = self.get_encSecKey()
             json_text = self.get_json(url, params, encSecKey)
@@ -160,5 +163,8 @@ class music:
 
 
 mail = music()
-mail.get_hotcomments("https://music.163.com/weapi/v1/resource/comments/R_SO_4_227323?csrf_token")
-mail.get_allcomments("https://music.163.com/weapi/v1/resource/comments/R_SO_4_227323?csrf_token")
+mail.get_hotcomments("https://music.163.com/weapi/v1/resource/comments/R_SO_4_1325905146?csrf_token")
+# mail.get_allcomments("https://music.163.com/weapi/v1/resource/comments/R_SO_4_1325905146?csrf_token")
+
+
+# see https://blog.csdn.net/weixin_42050513/article/details/80873094
