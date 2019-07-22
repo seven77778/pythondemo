@@ -26,9 +26,9 @@ def main():
     if ProcessName in ProList:
         # 判断进程名是否在列表中，如果是True，则所监控的服务正在 运行状态，
         # 打印服务正常运行
-        print ''
-        print "Server is running..."
-        print ''
+        print('')
+        print("Server is running...")
+        print('')
     else:
         # 如果进程名不在列表中，即监控的服务挂了，则在log文件下记录日志
         # 日志文件名是以年月日为文件名
@@ -45,8 +45,8 @@ def main():
         f.write(time.strftime('%Y-%m-%d %H:%M:%S --%A--%c', time.localtime()))
         f.close()
         # 关闭文件
-        print 'Restart Server Success...'
-        print time.strftime('%Y-%m-%d %H:%M:%S --%A--%c', time.localtime())
+        print('Restart Server Success...')
+        print(time.strftime('%Y-%m-%d %H:%M:%S --%A--%c', time.localtime()))
     del ProList[:]
 
 
