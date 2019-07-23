@@ -32,7 +32,7 @@ def setMsg():
     # 下面依次为邮件类型，主题，发件人和收件人。
     msg = MIMEMultipart('mixed')
     msg['Subject'] = '电脑已经启动'
-    msg['From'] = '88888888888@163.com <88888888888@163.com>'
+    msg['From'] = 'lisuheng345@163.com <lisuheng345@163.com>'
     msg['To'] = addressee
 
     # 下面为邮件的正文
