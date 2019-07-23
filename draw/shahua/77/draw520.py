@@ -53,7 +53,7 @@ def main(pictures_dir, template_path):
 if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description="Picture Wall Generator.")
 	parser.add_argument('-t', dest='template_path', help='Template path.', default='1.tmp')
-	parser.add_argument('-p', dest='pictures_dir', help='Pictures dir.', default='77')
+	parser.add_argument('-p', dest='pictures_dir', help='Pictures dir.', default='temp')
 	args = parser.parse_args()
 	template_path = args.template_path
 	pictures_dir = args.pictures_dir
