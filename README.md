@@ -5,3 +5,6 @@ my first python demo
 https://blog.csdn.net/weixin_43500985/article/details/89085317
 
 test deve
+
+清华源
+-i https://pypi.tuna.tsinghua.edu.cn/simple
