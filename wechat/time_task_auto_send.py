@@ -1,5 +1,4 @@
-"""
-"""
+# 定时喝水发送
 
 from __future__ import unicode_literals
 from threading import Timer
