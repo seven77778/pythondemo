@@ -1,0 +1,92 @@
+# 配置文件请严格遵循 yaml 语法格式，yaml 学习地址:
+#  https://ansible-tran.readthedocs.io/en/latest/docs/YAMLSyntax.html
+#  http://einverne.github.io/post/2015/08/yaml.html
+
+# 是否强制切换微信号
+is_forced_switch: False
+
+#---------------------------------------自动回复功能设置--------------------------------------start
+auto_reply_info:
+  # 是否开启自动回复
+  is_auto_reply: False
+
+  # 是否自动回复所有好友(慎重启动！),开启后，仅仅有黑名单的成员才不会自动回复
+  is_auto_reply_all: False
+
+  # 白名单，is_auto_reply_all: False 生效。此名单的用户才可自动回复。（填：文件传输助手，可回复自己，测试效果）
+  auto_reply_white_list:
+    - '七七777'
+    - '文件传输助手'
+
+  # 黑名单，is_auto_reply_all:True 生效。此名单不会自动回复。
+  auto_reply_black_list:
+    - '小号'
+
+  # 机器人渠道（1: 图灵机器人，2: 一个AI ,3 : 青云客，4 腾讯智能闲聊，5:天行机器人,6 海知智能)
+  bot_channel: 3
+
+  #图灵机器人(http://www.tuling123.com/) 实名后的用户每天免费可用 100 条。
+  turing_conf:
+    apiKey: '你申请的apikey'
+
+    # 天行机器人 ( https://www.tianapi.com/apiview/47 )。做完任务大概能免费用7万条，收费：1万条/1块钱
+  txapi_conf:
+    app_key: '个人中心中的key'
+    reply_name: '宝宝' # 回复的人的名字(可空)（也可在个人中心->机器人管理 修改）
+    bot_name: '老公' # 机器人的名字（可空）
+
+  # 智能闲聊（腾讯）https://ai.qq.com/product/nlpchat.shtml。免费且无限量
+  qqnlpchat_conf:
+    app_id: '你申请的api_id'
+    app_key: '你申请的app_key'
+
+  # 海知智能 <https://ruyi.ai/> 功能很强大，不仅仅用于聊天。需申请 key，免费
+  ruyi_conf:
+    app_key: '你申请的key'
+
+  # 一个 Al (http://www.yige.ai/)（已长时间无人维护）
+  yigeai_conf:
+    client_token: '你申请的token'
+
+
+#---------------------------------------自动回复功能设置--------------------------------------end
+
+
+
+#---------------------------------------定时提醒功能设置--------------------------------------start
+alarm_info:
+  #True 开启定时提醒，False 关闭
+  is_alarm: True
+
+  girlfriend_infos:
+    #微信昵称或者备注名，不能输入微信号。（如填：文件传输助手，发消息到文件传输助手，测试效果）
+    - wechat_name:
+        - '文件传输助手'
+        - '七七'
+        - '老朱123'
+      alarm_timed:
+        - "10:00"
+        - "15:10"
+        - "17:43"
+      is_tomorrow: False # 是否发送明日信息（如天气，星座，万年历）
+      # 所在城市，用于发送天气。（可空）
+      city_name: '杭州'
+      # 格言渠道（1 : ONE●一个，2 : 词霸（每日英语，双语）3: 土味情话 4 : 一言，5：笑话，6 民国情书,7彩虹屁)(可空)
+      dictum_channel: 2
+      # 从哪天开始勾搭的（可空），配合 start_date_msg 使用。
+      start_date: '2012-12-31'
+      # 自定义方案（可空）， {}表示用于占位，代表天数，与 start_date 一起使用。单填无意义
+      #  默认为：『宝贝这是我们在一起的第{}天』,参考：爱你的第{}天
+      start_date_msg: '七七宝贝,这是我们在一起的第{}天'
+      # 万历年（可空），（中老年最爱）
+      calendar: True
+      # 星座运势（可空）填生日日期："1980-06-15" or "06-15" or "白羊座"
+      horescope: "处女座"
+      # 落款（可空），落款参考：['厌物', '你脚下的蚂蚁', '专说骗人的诳话者', '黄天霸', 'cxk', '魔鬼的叔父', '哺乳类脊椎动物之一', '名字写在水上的人', 'BIG BAD WOLF', '你的兄弟']
+      sweet_words: 'From 你专属的小哼哼'
+
+
+
+#---------------------------------------定时提醒功能设置--------------------------------------end
+
+
