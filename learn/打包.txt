@@ -1,0 +1,3 @@
+pip install pyinstaller
+
+pyinstaller -F xxx.py 即可，当前目录下生成

@@ -1,0 +1,1 @@
+2019-12-10 17:11:13,906 mylogger.py[line:9] INFO xxxx
