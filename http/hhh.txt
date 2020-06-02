@@ -1,0 +1,2 @@
+2019-12-10 16:26:11,801 looggerr.py[line:9] INFO xxxx
+2019-12-10 16:26:43,402 looggerr.py[line:9] INFO xxxx

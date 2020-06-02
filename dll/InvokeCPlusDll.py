@@ -6,7 +6,7 @@ import sys
 from ctypes import *
 
 dll = cdll.LoadLibrary('ProjectForJava.dll')
-print dll.add(1, 2)
+print( dll.add(1, 2))
 
 # C++代码中 要有 extern "C"  __declspec(dllexport)   int add(int x,int y);
 # DllForJava.dll 运行失败
