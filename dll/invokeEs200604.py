@@ -6,7 +6,7 @@
 from ctypes import *
 
 
-dll = windll.LoadLibrary('es200601.dll')
+dll = windll.LoadLibrary('xxx.dll')
 print("dll版本号为 ： "+ str(dll.GetVersion()) )
 print("test")
 # ValueError: Procedure called with not enough arguments (8 bytes missing) or wrong calling convention

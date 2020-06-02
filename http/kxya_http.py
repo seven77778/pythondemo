@@ -27,20 +27,20 @@ class testHTTPServer_RequestHandler(http.server.BaseHTTPRequestHandler):
             if (room.isdigit() & begin.isdigit() & end.isdigit()):
                 print("makecard")
                 logging.error('makecard')
-                dll = ctypes.windll.LoadLibrary('C:\\futurehotel\\es200601.dll')
+                dll = ctypes.windll.LoadLibrary('C:\\xxx\\xxx.dll')
                 print("dll version ： " + str(dll.GetVersion()))
                 name = ctypes.c_char_p(b"gc")
                 roomno = ctypes.c_char_p(bytes(room.encode("utf-8")))
                 begintime = ctypes.c_char_p(bytes(begin.encode("utf-8")))
                 endtime = ctypes.c_char_p(bytes(end.encode("utf-8")))
                 cardno = ctypes.c_void_p(0)
-                print("database open:" + str(dll.OpenDatabase("", "")))
+                print("data open:" + str(dll.OpenDatabase("", "")))
                 logging.error("database open:" + str(dll.OpenDatabase("", "")))
                 response_body = dll.WriteGuestCard2(name,bytes(0),roomno,begintime,endtime,byref(cardno))
                 print("invoke dll  " +  str(response_body))
                 logging.error("invoke dll  " +  str(response_body))
                 # response_body = "0"
-                print("database close:" + str(dll.CloseDatabase()))
+                print("data close:" + str(dll.CloseDatabase()))
                 self.send_response(200)
 
                 # Send headers
